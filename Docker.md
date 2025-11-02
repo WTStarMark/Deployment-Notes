@@ -41,7 +41,8 @@ sudo dnf config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 
 - **安装指定版本：**
 
-* ```
+
+```
 dnf list docker-ce --showduplicates | sort -r
 		# 注：列出存储库中的可用版本
 sudo dnf install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io docker-buildx-plugin docker-compose-plugin
