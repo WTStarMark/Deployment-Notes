@@ -3,6 +3,7 @@
 **卸载旧版本：**
 
 ```
+#shell
 sudo dnf remove docker \
                   docker-client \
                   docker-client-latest \
