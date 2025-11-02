@@ -60,7 +60,7 @@ mysql -u root -p
 
 ```
 #mysql
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'Wt@123456';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEWpassword@123';
 ```
 
 
