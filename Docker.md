@@ -34,7 +34,6 @@ sudo dnf config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 
 **安装docker：**
 <br>
-
 - **安装最新版本：**
   ```
   #shell
