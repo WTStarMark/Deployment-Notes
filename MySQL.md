@@ -37,7 +37,6 @@ dnf install -y mysql-community-server
 #shell
 systemctl start mysqld
 systemctl enable mysqld
-
 ```
 
 **获取临时密码：**
