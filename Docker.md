@@ -17,12 +17,14 @@ sudo dnf remove docker \
 **更新dnf：**
 
 ```
+#shell
 sudo dnf upgrade -y
 ```
 
 **安装dnf-olugins-core包并设置储存库：**
 
 ```
+#shell
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 ```
@@ -35,6 +37,7 @@ sudo dnf config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 
 - **安装最新版本：**
 - ```
+  #shell
   sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
   ```
 
@@ -44,6 +47,7 @@ sudo dnf config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 
 
 - ```
+  	#shell
 	dnf list docker-ce --showduplicates | sort -r
 			# 注：列出存储库中的可用版本
 	sudo dnf install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io docker-buildx-plugin docker-compose-plugin
@@ -52,6 +56,7 @@ sudo dnf config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 **启动docker：**
 
 ```
+#shell
 sudo systemctl start docker
 sudo systemctl enable --now docker
 ```
@@ -59,6 +64,7 @@ sudo systemctl enable --now docker
 **配置加速 ：**
 
 ```
+#shell
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-"EOF"
 {
@@ -127,6 +133,7 @@ EOF
 **重启该服务和配置文件 ：**
 
 ```
+#shell
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
@@ -134,5 +141,6 @@ sudo systemctl restart docker
 **测试是否成功安装docker：**
 
 ```
+#shell
 sudo docker run hello-world
 ```
